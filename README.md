@@ -1,75 +1,153 @@
-# MFML Assignments Repository
+# MFML | Mathematical Foundations for Machine Learning
 
-## Overview
+![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
+![Status](https://img.shields.io/badge/status-coursework-2E7D32)
+![Focus](https://img.shields.io/badge/focus-numerical%20methods%20%7C%20computer%20vision-6A1B9A)
 
-This repository contains two academic assignments completed as part of a machine learning and numerical methods learning workflow. The work is organized into separate folders so each task remains easy to understand, run, and submit independently.
+> A focused coursework repository connecting mathematical theory with practical Python implementations.
 
-## Repository Purpose
+## About This Repository
 
-The main purpose of this project is to demonstrate:
+This repository contains two independent assignments from a mathematical foundations of machine learning workflow:
 
-- numerical problem solving using Python
-- data augmentation using affine transformations
-- practical implementation of mathematical concepts in real code
-- clean project organization for academic submissions
+- **Numerical computation:** solving systems of linear equations with Gaussian elimination.
+- **Computer vision:** expanding image data with linear and affine transformations.
 
-## Assignment Structure
+Each assignment is self-contained with its own implementation, guide, and outputs. The structure is designed for clear learning, reproducible execution, and professional academic submission.
 
-### 1. Gaussian Elimination Assignment
+## Learning Map
 
-Folder: [assignment_1_gaussian_elimination](assignment_1_gaussian_elimination)
+```mermaid
+flowchart LR
+	A[MFML Coursework] --> B[Assignment 1\nGaussian Elimination]
+	A --> C[Assignment 2\nAffine Image Augmentation]
+	B --> D[User enters\naugmented matrix]
+	D --> E[Row reduction]
+	E --> F[Linear system solution]
+	C --> G[User selects\ninput image]
+	G --> H[Affine transformations]
+	H --> I[Separate run folder\nand comparison montage]
+```
 
-This assignment focuses on solving systems of linear equations using the Gaussian elimination method. It includes:
+## Assignments
 
-- the Python solver
-- a detailed guide explaining the method
-- input format and execution steps
+### 01 | Gaussian Elimination
 
-### 2. Image Augmentation Assignment
+📐 **Purpose:** solve a system of linear equations from user-provided input.
 
-Folder: [assignment_2_image_augmentation](assignment_2_image_augmentation)
+**Implementation:** [gaussian_elimination.py](assignment_1_gaussian_elimination/gaussian_elimination.py)  
+**Guide:** [guide.md](assignment_1_gaussian_elimination/guide.md)
 
-This assignment applies affine transformations to an uploaded profile photo to create augmented image variations. It includes:
+```mermaid
+flowchart TD
+	A[Read number of variables] --> B[Read augmented matrix]
+	B --> C[Select pivot]
+	C --> D[Apply row operations]
+	D --> E{All pivots processed?}
+	E -- No --> C
+	E -- Yes --> F[Back substitution]
+	F --> G[Print x1, x2, ..., xn]
+```
 
-- the image augmentation script
-- generated transformed outputs
-- a professional guide explaining the concept and results
+### 02 | Affine Image Augmentation
 
-## Project Goals
+🖼️ **Purpose:** create realistic variations of an image for data augmentation.
 
-The repository is designed to showcase:
+**Implementation:** [image_augmentation_assignment.py](assignment_2_image_augmentation/image_augmentation_assignment.py)  
+**Guide:** [guide.md](assignment_2_image_augmentation/guide.md)  
+**Outputs:** [augmented_outputs](assignment_2_image_augmentation/augmented_outputs)
 
-- mathematical reasoning applied in code
-- practical use of Python for academic assignments
-- structured documentation for submission-quality work
-- clear separation between different task types
+```mermaid
+flowchart LR
+	A[Input image] --> B[Rotation]
+	A --> C[Scaling]
+	A --> D[Translation]
+	A --> E[Shearing]
+	A --> F[Horizontal flip]
+	B --> G[Augmented image set]
+	C --> G
+	D --> G
+	E --> G
+	F --> G
+	G --> H[Montage and run-specific outputs]
+```
 
-## How to Use
+## Repository Layout
 
-1. Open the repository in a Python-enabled environment.
-2. Navigate to the assignment folder you want to run.
-3. Follow the instructions in its `guide.md` file.
-4. Execute the relevant Python script using the terminal.
+```text
+MFML/
+├── README.md
+├── Profile.jpg
+├── assignment_1_gaussian_elimination/
+│   ├── gaussian_elimination.py
+│   └── guide.md
+└── assignment_2_image_augmentation/
+	├── image_augmentation_assignment.py
+	├── guide.md
+	└── augmented_outputs/
+		├── run_001/
+		├── run_002/
+		└── run_003/
+```
 
-## Example Commands
+## Quick Start
 
-### Gaussian elimination
+### Requirements
 
-```bash
+- Python 3.13 or a compatible Python 3 version
+- Pillow for Assignment 2
+
+Install the image-processing dependency in the project virtual environment:
+
+```powershell
+\.venv\Scripts\python.exe -m pip install pillow
+```
+
+### Run Assignment 1
+
+```powershell
 cd assignment_1_gaussian_elimination
 python gaussian_elimination.py
 ```
 
-### Image augmentation
+Enter the number of variables, followed by one augmented-matrix row per equation.
 
-```bash
+### Run Assignment 2
+
+```powershell
 cd assignment_2_image_augmentation
-python image_augmentation_assignment.py
+python image_augmentation_assignment.py "..\Profile.jpg"
 ```
 
-## Notes
+Every execution creates a new numbered folder inside `augmented_outputs`, so results from previous images are preserved:
 
-This repository is intended for academic demonstration and learning purposes. The structure is intentionally kept simple, professional, and easy to navigate.
+```text
+augmented_outputs/run_001/
+augmented_outputs/run_002/
+augmented_outputs/run_003/
+```
+
+To process another image, replace `"..\Profile.jpg"` with its path.
+
+## Concepts Demonstrated
+
+| Area              | Concepts                                                      |
+| ----------------- | ------------------------------------------------------------- |
+| Linear algebra    | Augmented matrices, row operations, pivots, back substitution |
+| Numerical methods | Algorithmic solving of linear systems                         |
+| Computer vision   | Image transformation and augmentation                         |
+| Software practice | Modular scripts, repeatable execution, documentation          |
+
+## Academic Purpose
+
+The project demonstrates how abstract mathematical concepts become practical programs:
+
+1. A mathematical model is defined.
+2. The algorithm is implemented in Python.
+3. User input or image data is processed.
+4. Results are generated and documented.
+
+This makes the repository useful as both a coursework submission and a compact reference for foundational machine learning concepts.
 
 ## Author
 
