@@ -17,17 +17,7 @@ Each assignment is self-contained with its own implementation, guide, and output
 
 ## Learning Map
 
-```mermaid
-flowchart LR
-	A[MFML Coursework] --> B[Assignment 1\nGaussian Elimination]
-	A --> C[Assignment 2\nAffine Image Augmentation]
-	B --> D[User enters\naugmented matrix]
-	D --> E[Row reduction]
-	E --> F[Linear system solution]
-	C --> G[User selects\ninput image]
-	G --> H[Affine transformations]
-	H --> I[Separate run folder\nand comparison montage]
-```
+![Learning Map](Flow%20Chart/1.png)
 
 ## Assignments
 
@@ -38,16 +28,7 @@ flowchart LR
 **Implementation:** [gaussian_elimination.py](assignment_1_gaussian_elimination/gaussian_elimination.py)  
 **Guide:** [guide.md](assignment_1_gaussian_elimination/guide.md)
 
-```mermaid
-flowchart TD
-	A[Read number of variables] --> B[Read augmented matrix]
-	B --> C[Select pivot]
-	C --> D[Apply row operations]
-	D --> E{All pivots processed?}
-	E -- No --> C
-	E -- Yes --> F[Back substitution]
-	F --> G[Print x1, x2, ..., xn]
-```
+![Gaussian Elimination Process](Flow%20Chart/2.png)
 
 ### 02 | Affine Image Augmentation
 
@@ -57,20 +38,7 @@ flowchart TD
 **Guide:** [guide.md](assignment_2_image_augmentation/guide.md)  
 **Outputs:** [augmented_outputs](assignment_2_image_augmentation/augmented_outputs)
 
-```mermaid
-flowchart LR
-	A[Input image] --> B[Rotation]
-	A --> C[Scaling]
-	A --> D[Translation]
-	A --> E[Shearing]
-	A --> F[Horizontal flip]
-	B --> G[Augmented image set]
-	C --> G
-	D --> G
-	E --> G
-	F --> G
-	G --> H[Montage and run-specific outputs]
-```
+![Affine Image Augmentation Workflow](Flow%20Chart/3.png)
 
 ## Repository Layout
 
@@ -78,16 +46,20 @@ flowchart LR
 MFML/
 ├── README.md
 ├── Profile.jpg
+├── Flow Chart/
+│   ├── 1.png
+│   ├── 2.png
+│   └── 3.png
 ├── assignment_1_gaussian_elimination/
 │   ├── gaussian_elimination.py
 │   └── guide.md
 └── assignment_2_image_augmentation/
-	├── image_augmentation_assignment.py
-	├── guide.md
-	└── augmented_outputs/
-		├── run_001/
-		├── run_002/
-		└── run_003/
+    ├── image_augmentation_assignment.py
+    ├── guide.md
+    └── augmented_outputs/
+        ├── run_001/
+        ├── run_002/
+        └── run_003/
 ```
 
 ## Quick Start
