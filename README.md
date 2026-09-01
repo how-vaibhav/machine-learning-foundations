@@ -23,7 +23,7 @@ Each assignment is self-contained with its own implementation, guide, and output
 
 ### 01 | Gaussian Elimination
 
-📐 **Purpose:** solve a system of linear equations from user-provided input.
+ **Purpose:** solve a system of linear equations from user-provided input.
 
 **Implementation:** [gaussian_elimination.py](assignment_1_gaussian_elimination/gaussian_elimination.py)  
 **Guide:** [guide.md](assignment_1_gaussian_elimination/guide.md)
@@ -32,7 +32,7 @@ Each assignment is self-contained with its own implementation, guide, and output
 
 ### 02 | Affine Image Augmentation
 
-🖼️ **Purpose:** create realistic variations of an image for data augmentation.
+**Purpose:** create realistic variations of an image for data augmentation.
 
 **Implementation:** [image_augmentation_assignment.py](assignment_2_image_augmentation/image_augmentation_assignment.py)  
 **Guide:** [guide.md](assignment_2_image_augmentation/guide.md)  
