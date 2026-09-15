@@ -24,7 +24,7 @@ Each assignment is self-contained with its own implementation, guide, and output
 
 ### 01 | Gaussian Elimination
 
-📐 **Purpose:** solve a system of linear equations from user-provided input.
+ **Purpose:** solve a system of linear equations from user-provided input.
 
 **Implementation:** [gaussian_elimination.py](assignment_1_gaussian_elimination/gaussian_elimination.py)  
 **Guide:** [guide.md](assignment_1_gaussian_elimination/guide.md)
@@ -33,7 +33,7 @@ Each assignment is self-contained with its own implementation, guide, and output
 
 ### 02 | Affine Image Augmentation
 
-🖼️ **Purpose:** create realistic variations of an image for data augmentation.
+ **Purpose:** create realistic variations of an image for data augmentation.
 
 **Implementation:** [image_augmentation_assignment.py](assignment_2_image_augmentation/image_augmentation_assignment.py)  
 **Guide:** [guide.md](assignment_2_image_augmentation/guide.md)  
@@ -43,7 +43,7 @@ Each assignment is self-contained with its own implementation, guide, and output
 
 ### 03 | PCA via Singular Value Decomposition
 
-📊 **Purpose:** implement SVD from mathematical first principles and use it to perform PCA on the Iris dataset.
+ **Purpose:** implement SVD from mathematical first principles and use it to perform PCA on the Iris dataset.
 
 **Implementation:** [pca_svd.py](assignment_3_pca_svd/pca_svd.py)  
 **Guide:** [guide.md](assignment_3_pca_svd/guide.md)
