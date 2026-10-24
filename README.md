@@ -43,7 +43,7 @@ Each assignment is self-contained with its own implementation, guide, and output
 
 ### 03 | PCA via Singular Value Decomposition
 
-**Purpose:** implement SVD from mathematical first principles and use it to perform PCA on the Iris dataset.
+📊 **Purpose:** implement SVD from mathematical first principles and use it to perform PCA on the Iris dataset.
 
 **Implementation:** [pca_svd.py](assignment_3_pca_svd/pca_svd.py)  
 **Guide:** [guide.md](assignment_3_pca_svd/guide.md)
